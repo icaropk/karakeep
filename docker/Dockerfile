@@ -249,3 +249,6 @@ COPY --from=mcp_builder /app/apps/mcp/dist/index.js apps/mcp/index.js
 WORKDIR /app/apps/mcp
 
 ENTRYPOINT ["node", "index.js"]
+
+# Fork: make aio the default build target (used by Easypanel)
+FROM aio AS custom
